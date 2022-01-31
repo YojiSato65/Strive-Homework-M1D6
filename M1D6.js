@@ -66,7 +66,7 @@ console.log(me)
    Write a piece of code for programmatically removing the last skill from the skills array inside the me object.
 */
 printHeader('ExerciseG')
-delete me.skills[2]
+me.skills.pop()
 console.log(me)
 
 // JS Functions
@@ -131,19 +131,18 @@ console.log(deleteOne('hello', false))
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
 printHeader('Exercise5')
-// GAVE UP:(
+
 const onlyLetters = function(str) {
-   const cutWords = str.split(' ')
-   const newWords = []
-   for (i = 0; i <= cutWords.length; i++) { 
-    if(isNaN(cutWords[i])) {
-      newWords.push()
-    } else {
-      return cutWords.pop()
-     }
-    } return newWords
-   }
- console.log(onlyLetters('I have 4 dogs.'))
+  let result = ''
+  for (i = 0; i < str.length; i++){
+    let currentLetter = str[i]
+    if (isNaN(currentLetter)) {
+      result += currentLetter
+    }
+  } 
+  return result
+}
+console.log(onlyLetters('I have 4 dogs.'))
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
@@ -164,10 +163,11 @@ console.log(isThisAnEmail('yoji@gmal.com'))
    Write a function called whatDayIsIt that should return the current day of the week.
 */
 printHeader('Exercise7')
-const whatDayIsIt = function(day) {
-
-
+const whatDayIsIt = function() {
+  let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+  return days[new Date().getDay()]
 }
+console.log(whatDayIsIt())
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
@@ -179,8 +179,21 @@ const whatDayIsIt = function(day) {
         values: [3, 3, 4]
     }
 */
-// printHeader('Exercise8')
 
+printHeader('Exercise8')
+const rollTheDices = function(numOfDices) {
+  let result = {
+    sum: 0,
+    values: []
+  }
+  for (let i = 0; i < numOfDices; i++) {
+    let dicerolls = dice()
+     result.sum += dicerolls
+     result.values.push(dicerolls)
+  }
+  return result
+}
+console.log(rollTheDices(5))
 
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
@@ -249,7 +262,7 @@ const whatDayIsIt = function(day) {
     this object should contain an array called match, made by all the movies from the provided movies array which contain the given string in the title,
     and another array unmatch with all the remaining ones.
 */
-printHeader('Exercise19')
+// printHeader('Exercise19')
 
 
 /* EXERCISE 20
