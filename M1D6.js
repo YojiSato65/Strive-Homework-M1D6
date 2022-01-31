@@ -73,10 +73,27 @@ console.log(me)
 /* EXERCISE 1
     Write a function called dice; it should randomize an integer number between 1 and 6.
 */
+printHeader('Exercise1')
+const dice = function(num) {
+   return Math.floor(Math.random()*6+1)
+}  
+   console.log(dice())
+
+
 
 /* EXERCISE 2
     Write a function called whoIsBigger which receives 2 numbers as parameters and returns the biggest one.
 */
+printHeader('Exercise2')
+const whoIsBigger = function(num1, num2) {
+    if (num1 > num2) {
+        return num1
+    } else if (num2 > num1) {
+        return num2
+    } else (num1 === num2)
+        console.log('They have the same value.')
+}
+console.log(whoIsBigger(5,2))
 
 /* EXERCISE 3
     Write a function called splitMe which receives a string as a parameter and returns an array with every word in that string.
