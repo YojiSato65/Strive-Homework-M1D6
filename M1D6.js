@@ -131,14 +131,43 @@ console.log(deleteOne('hello', false))
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
 printHeader('Exercise5')
+// GAVE UP:(
+const onlyLetters = function(str) {
+   const cutWords = str.split(' ')
+   const newWords = []
+   for (i = 0; i <= cutWords.length; i++) { 
+    if(isNaN(cutWords[i])) {
+      newWords.push()
+    } else {
+      return cutWords.pop()
+     }
+    } return newWords
+   }
+ console.log(onlyLetters('I have 4 dogs.'))
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
 */
+printHeader('Exercise6')
+const isThisAnEmail = function(str) {
+  if (str.includes('@gmail.com')) {
+    return true
+  } else {
+    return false
+  }
+}
+console.log(isThisAnEmail('yoji@gmal.com'))
+
+
 
 /* EXERCISE 7
    Write a function called whatDayIsIt that should return the current day of the week.
 */
+printHeader('Exercise7')
+const whatDayIsIt = function(day) {
+
+
+}
 
 /* EXERCISE 8
     Write a function called rollTheDices which receives a number as a parameter.
@@ -150,14 +179,19 @@ printHeader('Exercise5')
         values: [3, 3, 4]
     }
 */
+// printHeader('Exercise8')
+
 
 /* EXERCISE 9
    Write a function called howManyDays which receives a date as a parameter and returns the number of days passed since that date.
 */
+// printHeader('Exercise9')
+
 
 /* EXERCISE 10
    Write a function called isTodayMyBirthday which should return true if today's your birthday, false otherwise.
 */
+// printHeader('Exercise10')
 
 // JS Arrays & Objects
 // NOTE: the movies array used in some exercises is defined at the end of this file
@@ -166,44 +200,63 @@ printHeader('Exercise5')
    Write a function called deleteProp which receives an object and a string as parameters,
    and returns the given object after deleting its property named as the given string.
 */
+// printHeader('Exercis11')
+
 
 /* EXERCISE 12
     Write a function called oldestMovie which finds the oldest movie in the provided movies array.
 */
+// printHeader('Exercise12')
+
 
 /* EXERCISE 13
     Write a function called countMovies which returns the number of movies contained in the provided movies array.
 */
+// printHeader('Exercise13')
 
 /* EXERCISE 14
     Write a function called onlyTheTitles which creates an array with just the titles of the movies contained in the provided movies array.
 */
+// printHeader('Exercise14')
+
 
 /* EXERCISE 15
    Write a function called onlyInThisMillennium which returns only the movies produced in this millennium from the provided movies array.
 */
+// printHeader('Exercise15')
+
 
 /* EXERCISE 16 
     Write a function called getMovieById which receives an id as a parameter and returns the movie with the given id from the provided movies array.
 */
+// printHeader('Exercise16')
+
 
 /* EXERCISE 17
     Write a function called sumAllTheYears which returns the sum of all the years in which the movies in the provided movies array have been produced.
 */
+// printHeader('Exercise17')
+
 
 /* EXERCISE 18
     Write a function called searchByTitle which receives a string as a parameter and returns all the movies in the provided movies array which contain that string in the title.
 */
+// printHeader('Exercise18')
+
 
 /* EXERCISE 19
     Write a function called searchAndDivide which receives a string as a parameter and returns an object;
     this object should contain an array called match, made by all the movies from the provided movies array which contain the given string in the title,
     and another array unmatch with all the remaining ones.
 */
+printHeader('Exercise19')
+
 
 /* EXERCISE 20
    Write a function called "removeIndex" which receives a number as a parameter and returns the provided movies array without the element in the given position.
 */
+// printHeader('Exercise20')
+
 
 // [EXTRAS] JS Advanced
 
@@ -215,6 +268,9 @@ printHeader('Exercise5')
   **
   ***
 */
+// printHeader('Exercis21')
+
+
 
 /* EXERCISE 22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
@@ -224,10 +280,16 @@ printHeader('Exercise5')
    *** 
   *****
 */
+// printHeader('Exercise22')
+
+
 
 /* EXERCISE 23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
+// printHeader('Exercise23')
+
+
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
