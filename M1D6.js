@@ -117,14 +117,20 @@ console.log(splitMe('I love dog'))
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
 printHeader('Exercise4')
-const deleteOne = function(){
-
+const deleteOne = function(string, boolean){
+    if (boolean === true) {
+        return string.slice(1)
+    } else {
+        return string.slice(0, string.length -1)
+    }
 }
+console.log(deleteOne('hello', false))
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs") => returns "I have  dogs"
 */
+printHeader('Exercise5')
 
 /* EXERCISE 6
    Write a function called isThisAnEmail which receives a string as a parameter and returns true if the string is a valid email address.
