@@ -100,10 +100,26 @@ console.log(whoIsBigger(5,2))
     Ex.: splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
+// HOW TO USE .SPLIT()
+// let example = 'I love you'
+// const split = example.split(' ')
+// console.log(split)
+
+printHeader('Exercise3')
+const splitMe = function(str) {
+    const split = str.split(' ')
+    return split
+}
+console.log(splitMe('I love dog'))
+
 /* EXERCISE 4
     Write a function called deleteOne which receives a string and a boolean as parameters.
     If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+printHeader('Exercise4')
+const deleteOne = function(){
+
+}
 
 /* EXERCISE 5
    Write a function called onlyLetters which receives a string as a parameter and returns it removing all the digits.
